@@ -37,7 +37,8 @@ local-infrastructure-up: local-docker-infrastructure-up
 
 local-infrastructure-stop: local-docker-infrastructure-stop
 
-
+local-infrastructure-down:
+	docker compose -f ../infrastructure/docker/docker-compose.yml down
 # --- Run ---
 
 run_agent_app: check-config
